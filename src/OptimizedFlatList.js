@@ -58,6 +58,7 @@ export default class OptimizedFlatList extends React.PureComponent {
     return (
       <FlatList
         {...this.props}
+        ref={c => (this.flatList = c)}
         renderItem={ data => this._renderItem(data) }
         onViewableItemsChanged={this._onViewableItemsChanged.bind(this)}
       />
